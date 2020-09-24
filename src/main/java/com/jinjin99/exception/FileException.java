@@ -1,9 +1,8 @@
-package com.free.exception;
+package com.jinjin99.exception;
 
 /**
  * @ClassNameFileException
  * @Description
- * @Author Free
  * @Date2020/9/21 23:32
  * @Version V1.0
  **/

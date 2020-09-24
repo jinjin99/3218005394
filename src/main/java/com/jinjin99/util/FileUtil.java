@@ -1,13 +1,12 @@
-package com.free.util;
+package com.jinjin99.util;
 
 import cn.hutool.core.io.file.FileReader;
 import cn.hutool.core.io.file.FileWriter;
-import com.free.exception.FileException;
+import com.jinjin99.exception.FileException;
 
 /**
  * @ClassNameFileutil
  * @Description
- * @Author Free
  * @Date2020/9/20 12:34
  * @Version V1.0
  **/

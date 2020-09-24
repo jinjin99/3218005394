@@ -1,11 +1,11 @@
-package com.free.util;
+package com.jinjin99.util;
 
 import cn.hutool.core.io.file.FileReader;
 import cn.hutool.extra.tokenizer.Result;
 import cn.hutool.extra.tokenizer.TokenizerEngine;
 import cn.hutool.extra.tokenizer.Word;
 import cn.hutool.extra.tokenizer.engine.hanlp.HanLPEngine;
-import com.free.exception.FileException;
+import com.jinjin99.exception.FileException;
 
 
 import java.util.*;
@@ -13,32 +13,27 @@ import java.util.*;
 /**
  * @ClassNameTokenizerUtil
  * @Description 分词工具
- * @Author Free
  * @Date2020/9/20 13:21
  * @Version V1.0
  **/
 public class TokenizerUtil {
 
     public static Map<String, List<Integer>> CountWord(String path){
-        //new 一个结果树
         Map<String, List<Integer>> resMap = new TreeMap<String,List<Integer>>();
-        //初始化分词引擎
+
         TokenizerEngine engine = new HanLPEngine();
         try {
-            //读取文件
             String s = FileUtil.readFile(path);
         }catch (FileException e){
             System.out.println(e.getMessage());
             return null;
         }
-        //默认先用UTF-8编码
         FileReader fileReader = new FileReader(path,"UTF-8");
         String text = fileReader.readString();
         Result result = engine.parse(text);
         //解析文本
         Iterator<Word> iterator = result.iterator();
         int pos=0;
-        //开始遍历
         while(iterator.hasNext()){
             String tempWord = iterator.next().toString();
             String afterWord ="";
@@ -71,6 +66,7 @@ public class TokenizerUtil {
         if(map1==null||map2==null){
             return null;
         }
+
 
         //统计计算了多少个词
         int count = 0;

@@ -1,7 +1,7 @@
-package com.free;
+package com.jinjin99;
 import cn.hutool.core.io.file.FileReader;
-import com.free.util.FileUtil;
-import com.free.util.TokenizerUtil;
+import com.jinjin99.util.FileUtil;
+import com.jinjin99.util.TokenizerUtil;
 
 import java.util.List;
 import java.util.Map;
@@ -9,7 +9,6 @@ import java.util.Map;
 /**
  * @ClassNamemain
  * @Description
- * @Author Free
  * @Date2020/9/20 11:40
  * @Version V1.0
  **/
